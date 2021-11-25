@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="PriceTextView" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:textDirection">locale</item>
+        <item name="android:textColor">@color/colorRedErrorTextAppTheme</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/font_size_2</item>
+        <item name="android:layout_marginStart">@dimen/dimen_8_dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_8_dp</item>
+        <item name="android:layout_marginTop">@dimen/standard_margin</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">@dimen/dimen_0_dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ItemView" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:textDirection">locale</item>
+        <item name="android:textColor">@color/colorBlackTheme</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/font_size_1</item>
+        <item name="android:layout_marginStart">@dimen/dimen_8_dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_8_dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

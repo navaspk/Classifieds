@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#703DAF</color>
+    <color name="colorPrimaryDark">#703DAF</color>
+    <color name="colorAccent">#fca600</color>
+    <color name="colorGreyBackgroundEvent">#E0E1E3</color>
+    <color name="grey200">#ffeeeeee</color>
+    <color name="colorBlackTheme">#3e3e3e</color>
+    <color name="colorDarkGreyTextAppTheme">#a2a2a2</color>
+    <color name="colorRedErrorTextAppTheme">#ff4d4d</color>
+    <color name="colorRedCardViewOuterBorder">#c24002</color>
+    <color name="small_divider_color">#ededed</color>
+    <color name="splash_color">@color/colorGreyBackgroundEvent</color>
+    <color name="tab_color">@color/colorPrimaryDark</color>
+    <color name="screen_background_color">#ffffffff</color>
+</resources>

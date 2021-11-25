@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintOptionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarGroupInfo">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/expandedImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_300_dp"
+            android:layout_centerInParent="true"
+            android:alpha="0"
+            android:contentDescription="@string/image_desc"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarGroupInfo"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/tab_color"
+            app:contentInsetLeft="@dimen/dimen_0_dp"
+            app:contentInsetStart="@dimen/dimen_0_dp"
+            app:contentInsetStartWithNavigation="@dimen/dimen_0_dp"
+            app:layout_collapseMode="pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/actionBarSize"
+            android:layout_marginEnd="80dp"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="6dp"
+            android:shadowColor="#83000000"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:singleLine="true"
+            android:textColor="@color/colorBlackTheme"
+            android:textSize="@dimen/font_size_3"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="600 AED" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/actionBarSize"
+            android:layout_marginEnd="80dp"
+            android:gravity="top"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="6dp"
+            android:shadowColor="@color/grey200"
+            android:shadowDy="1"
+            android:textAllCaps="true"
+            android:textColor="@color/colorGreyBackgroundEvent"
+            android:textSize="@dimen/font_size_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPrice"
+            tools:text="Note book" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

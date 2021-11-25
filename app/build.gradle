@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+
+android {
+
+    compileSdkVersion app.compileSdk
+    buildToolsVersion app.buildTools
+    defaultConfig {
+        applicationId app.packageId
+        minSdkVersion app.minSdk
+        targetSdkVersion app.targetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions 'app', 'environment'
+
+    productFlavors {
+        classified {
+            dimension 'app'
+            ext {
+                dev = endPoints.dev
+            }
+        }
+
+        dev {
+            dimension 'environment'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def flavours = variant.productFlavors
+            def app = flavours[0]
+            def environment = flavours[1]
+            variant.buildConfigField('String', 'BASE_URL', "${app[environment.name]}")
+            outputFileName = "${app.name}_${environment.name}_${variant.versionName}.apk"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility java.sourceCompatibility
+        targetCompatibility java.targetCompatibility
+    }
+
+    sourceSets {
+
+        main {
+            java.srcDirs += 'src/main/kotlin'
+            java.srcDirs += 'src/main/java'
+            java.srcDirs += 'build/generated/data_binding_base_class_source_out/debug/out'
+            // Added temporary due android studio databinding stability issue
+
+            res.srcDirs = [
+                    'src/main/res/layouts',
+                    'src/main/res/drawables',
+                    'src/main/res',
+                    'src/main/res/layouts/main',
+            ]
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    addDepedencies(dependencies, appDepedencies)
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':core')
+}

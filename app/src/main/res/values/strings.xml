@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Classifieds</string>
+    <string name="theme">App Theme</string>
+    <string name="image_desc">Item image</string>
+    <string name="unknown_result">No response due to frequent request</string>
+    <string name="wrong_response">Something went wrong</string>
+    <string name="content_desc">The product %s is from one of the big brand, having good working condition. Planning to sell as soon as possible
+    . This is cost around %s and this ad is posted at %s on %s.\nWelcome all of you if you want to purchase and anybody can contact at
+    +971XXXXXXX.</string>
+    <string name="not_data">Sorry No data available</string>
+    <string name="ok">Okay</string>
+    <string name="internet_error">No Internet</string>
+    <string name="internet_error_message">No Internet access, please turn ON your WiFi or Data</string>
+    <string name="brandName">Brand Name</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@layout/fragment_details_item_collapse"
+        motion:constraintSetStart="@layout/fragment_details_item_expand"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/textViewProductName"
+            motion:touchAnchorSide="top" />
+    </Transition>
+
+</MotionScene>

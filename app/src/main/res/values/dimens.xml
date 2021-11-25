@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region general -->
+    <dimen name="dimen_0_dp">0dp</dimen>
+    <dimen name="dimen_8_dp">8dp</dimen>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="dimen_300_dp">300dp</dimen>
+    <!-- endregion -->
+
+    <!-- region general font sizes -->
+    <dimen name="font_size_1">12sp</dimen>
+    <dimen name="font_size_2">16sp</dimen>
+    <dimen name="font_size_3">20sp</dimen>
+    <!-- endregion -->
+</resources>

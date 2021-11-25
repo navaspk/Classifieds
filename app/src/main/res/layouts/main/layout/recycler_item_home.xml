@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.sample.core.domain.entity.ResultsItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8_dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/dimen_8_dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:background="@color/screen_background_color">
+
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image_desc"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/bg_splash" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/itemPrice"
+                style="@style/PriceTextView"
+                android:text="@{data.price}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemImage"
+                tools:text="AED 50.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item"
+                style="@style/ItemView"
+                android:layout_marginTop="@dimen/dimen_8_dp"
+                android:text="@{data.name}"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemPrice"
+                tools:text="Note book" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/itemDate"
+                style="@style/ItemView"
+                android:layout_marginTop="@dimen/dimen_8_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item"
+                tools:text="12/08/1970" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

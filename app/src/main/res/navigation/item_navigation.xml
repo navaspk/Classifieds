@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/events"
+    app:startDestination="@id/allItemFragment">
+
+
+    <fragment
+        android:id="@+id/allItemFragment"
+        android:name="com.sample.ui.main.fragment.home.AllItemFragment"
+        android:label="ItemFragment">
+        <action
+            android:id="@+id/action_itemFragment_to_detailFragment"
+            app:destination="@id/itemDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.sample.ui.main.fragment.details.ItemDetailsFragment"
+        android:label="DetailFragment" />
+
+</navigation>
