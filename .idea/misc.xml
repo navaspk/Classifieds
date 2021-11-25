@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Project/Navas/Classifieds/app/src/main/res/layout/activity_main.xml" value="0.19114583333333332" />
+        <entry key="..\:/Project/Navas/Classifieds/app/src/main/res/layouts/main/layout/activity_main.xml" value="0.10090817356205853" />
+        <entry key="..\:/Project/Navas/Classifieds/app/src/main/res/layouts/main/layout/fragment_all_item.xml" value="0.20833333333333334" />
+        <entry key="..\:/Project/Navas/Classifieds/app/src/main/res/layouts/main/layout/recycler_details_item_desc.xml" value="0.20833333333333334" />
       </map>
     </option>
   </component>
