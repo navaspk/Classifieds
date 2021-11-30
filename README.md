@@ -15,9 +15,7 @@ Libraries used
 8) OkHttp
 
 
-Just clone the repository and build. Make sure your system has active internet connection to download all the dependencies.
-
-Replace api key with yours in app build.gradl filee.
+Just clone the repository and build. Make sure your system has active internet connection to download all the dependencies
 
 
 
