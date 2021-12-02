@@ -17,7 +17,7 @@ import com.sample.ui.main.activities.MainActivityViewModel
 import com.sample.ui.main.fragment.details.adapter.DetailItemAdapter
 
 /**
- * Selected detail fragment to show more detail about the product. For no
+ * Selected detail fragment to show more detail about the product.
  */
 class ItemDetailsFragment :
     BaseFragment<FragmentDetailsItemExpandBinding, ItemDetailsFragmentViewModel>(),

@@ -26,7 +26,7 @@ import javax.inject.Inject
  *
  * </p>
  *
- * Data are asynchronously get updated from livedata which defined insied view model class
+ * Data are asynchronously get updated from livedata which defined inside view model class
  */
 class AllItemFragment : BaseFragment<FragmentAllItemBinding, AllItemFragmentViewModel>(),
     AllItemFragmentNavigator, ItemClickListener {
@@ -59,7 +59,6 @@ class AllItemFragment : BaseFragment<FragmentAllItemBinding, AllItemFragmentView
 
         (activity as MainActivity).controlMainToolBarVisibility(VISIBLE)
         if (hasInternetConnection()) {
-            android.util.Log.d("mine", "initUserInterface item=" + adapter?.getItems())
             viewDataBinding?.progressBar?.visibility = VISIBLE
             viewDataBinding?.let {
                 it.itemRecyclerView.apply {
@@ -96,21 +95,14 @@ class AllItemFragment : BaseFragment<FragmentAllItemBinding, AllItemFragmentView
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        android.util.Log.d("mine", "onDestroyView called allitem")
-    }
-
     override fun onDestroy() {
         super.onDestroy()
-        android.util.Log.d("mine", "onDestroy called allitem")
         adapter = null
     }
     //end region
 
     // region OVERRIDDEN
     override fun onItemClick(position: Int, view: View) {
-        android.util.Log.d("mine", "item name=" + adapter?.getItems()?.get(position)?.name)
         sharedViewModel.selectedItem = adapter?.getItems()?.get(position)
         findNavController().navigate(R.id.action_itemFragment_to_detailFragment)
     }

@@ -9,6 +9,9 @@ import com.sample.core.domain.rxcallback.OptimizedCallbackWrapper
 import com.sample.core.domain.usecase.GetAllItemUseCase
 import javax.inject.Inject
 
+/**
+ * View model class responsible for performing ultimate logic & get back the response
+ */
 class AllItemFragmentViewModel @Inject constructor(
     private val allItemUseCase: GetAllItemUseCase
 ) : BaseViewModel<AllItemFragmentNavigator>() {
@@ -28,7 +31,6 @@ class AllItemFragmentViewModel @Inject constructor(
     inner class ClassifiedsSubscriber : OptimizedCallbackWrapper<ItemsResponse>() {
 
         override fun onApiSuccess(response: ItemsResponse) {
-            android.util.Log.d("mine", "onApi success response=${response.results?.size}")
             if (response.status || response.results?.isNotEmpty() == true) {
                 itemLiveDat.postValue(response.results as ArrayList<ResultsItem>)
             } else {
@@ -37,7 +39,6 @@ class AllItemFragmentViewModel @Inject constructor(
         }
 
         override fun onApiError(error: BaseError) {
-            android.util.Log.d("mine", "onApiError error=$error")
             getNavigator()?.somethingWentWrong()
         }
 
